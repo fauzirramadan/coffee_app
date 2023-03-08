@@ -10,7 +10,7 @@ class LoadingCircular extends StatelessWidget {
       child: CircleAvatar(
           backgroundColor: ConfigColor.lightBrown,
           child: CircularProgressIndicator(
-            color: ConfigColor.darkBrown,
+            color: ConfigColor.primaryColor,
           )),
     );
   }

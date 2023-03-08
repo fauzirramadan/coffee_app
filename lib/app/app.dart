@@ -1,6 +1,7 @@
 import 'package:coffe_app/utils/theme.dart';
 import 'package:coffe_app/view/pages/home.dart';
 import 'package:coffe_app/view/pages/login.dart';
+import 'package:coffe_app/view/pages/splash.dart';
 import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> navKey = GlobalKey();
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: ConfigColor.primaryColor,
       ),
-      home: LoginPage(),
+      home: const SplashScreen(),
     );
   }
 }

@@ -27,7 +27,6 @@ class CoffeeCubit extends Cubit<CoffeeState> {
         (a, b) =>
             int.parse(a.id.toString()).toInt().compareTo(b.id?.toInt() ?? 0),
       );
-
       emit(CoffeeSuccess(data));
     });
   }

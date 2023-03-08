@@ -27,6 +27,7 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomField(
                   controller: pinC,
@@ -35,7 +36,14 @@ class LoginPage extends StatelessWidget {
                   suffixIcon: const Icon(Icons.security),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 8,
+                ),
+                const Text(
+                  "Hint : what year was last year?",
+                  style: TextStyle(color: Colors.black54, fontSize: 13),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 BlocBuilder<LoginCubit, LoginState>(
                   builder: (context, state) {

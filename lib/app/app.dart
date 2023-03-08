@@ -1,4 +1,6 @@
+import 'package:coffe_app/utils/theme.dart';
 import 'package:coffe_app/view/pages/home.dart';
+import 'package:coffe_app/view/pages/login.dart';
 import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> navKey = GlobalKey();
@@ -9,14 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Coffe App',
+      title: 'Coffee App',
       navigatorKey: navKey,
       scaffoldMessengerKey: scaffoldMessengerKey,
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.blue,
+        primarySwatch: ConfigColor.primaryColor,
       ),
-      home: const HomePage(),
+      home: LoginPage(),
     );
   }
 }

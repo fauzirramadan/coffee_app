@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:coffe_app/core/models/coffee.dart';
@@ -10,14 +11,15 @@ import '../network/api.dart';
 import '../network/dio_handler.dart';
 
 class GeneralRepo {
-  Future<Either<Failure, Coffee>> dataPhotos(int page) async {
+  Future<Either<Failure, List<Coffee>>> dataCoffee() async {
     try {
       Response res = await dio.get(Api.coffeeApi);
-      return Either.success(Coffee.fromJson(res.data));
+      return Either.success(coffeeFromJson(jsonEncode(res.data)));
     } catch (e, st) {
       if (kDebugMode) {
         log(st.toString());
       }
+      log(e.toString());
       return Either.error(Failure(e.toString()));
     }
   }

@@ -25,7 +25,7 @@ class CoffeeCubit extends Cubit<CoffeeState> {
       listCoffee = data;
       listCoffee.sort(
         (a, b) =>
-            int.parse(a.id.toString()).toInt().compareTo(b.id?.toInt() ?? 0),
+            int.parse(b.id.toString()).toInt().compareTo(a.id?.toInt() ?? 0),
       );
       emit(CoffeeSuccess(data));
     });
